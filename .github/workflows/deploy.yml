@@ -1,0 +1,28 @@
+name: Deploy with Capistrano
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3.1'
+        bundler-cache: true
+
+    - name: Run Capistrano Deploy
+      uses: miloserdow/capistrano-deploy@dev
+      with:
+        target: production
+        deploy_key: ${{ secrets.DEPLOY_ENC_KEY }}
+        enc_rsa_key_pth: config/deploy_id_ed25519_enc
+
