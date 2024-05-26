@@ -1,3 +1,5 @@
+lock '>= 3.18'
+
 require 'capistrano/setup'
 require 'capistrano/deploy'
 
