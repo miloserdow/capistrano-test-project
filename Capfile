@@ -1,4 +1,4 @@
-lock '>= 3.18'
+lock "~> 3.18.1"
 
 require 'capistrano/setup'
 require 'capistrano/deploy'

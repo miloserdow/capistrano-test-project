@@ -1,5 +1,5 @@
 # config/deploy.rb
-lock "~> 3.14.0"
+lock "~> 3.18.1"
 
 set :application, "simple_app"
 set :repo_url, "https://github.com/miloserdow/capistrano-test-project.git"
