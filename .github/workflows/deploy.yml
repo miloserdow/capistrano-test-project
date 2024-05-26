@@ -21,6 +21,9 @@ jobs:
 
     - name: Run Capistrano Deploy
       uses: miloserdow/capistrano-deploy@dev
+      env:
+        SERVER_USER: ${{ secrets.SERVER_USER }}
+        SERVER_IP: ${{ secrets.SERVER_IP }}
       with:
         target: production
         deploy_key: ${{ secrets.DEPLOY_ENC_KEY }}
