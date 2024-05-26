@@ -2,4 +2,4 @@
 
 source "https://rubygems.org"
 
-gem 'capistrano', '~> 3.14'
+gem 'capistrano', '~> 3.18.1'
